@@ -3,24 +3,19 @@
 Esta carpeta contiene los workflows de [GitHub Actions](https://docs.github.com/actions)
 del proyecto.
 
-Como la plantilla es agnóstica del stack, **no incluye workflows listos para
-ejecutar**: solo un esqueleto de ejemplo. Adáptalo (o créalo) según tu lenguaje
-y herramientas.
+## Workflows incluidos
 
-## Esqueleto incluido
+- [`ci.yml`](ci.yml) — se ejecuta en cada push y PR a `main`/`develop`:
+  - **Lint y formato**: `ruff check .` y `black --check .`.
+  - **Compilar**: verifica la sintaxis de las 7 etapas en Python 3.8–3.12
+    (`python -m compileall`).
 
-- [`ci.example.yml`](ci.example.yml) — pipeline de CI neutro (lint → test → build).
-  Tiene la extensión `.example` **a propósito** para que GitHub no lo ejecute.
-  Cuando lo adaptes a tu stack, renómbralo a `ci.yml`.
-
-## Workflows recomendados
+## Workflows recomendados a futuro
 
 | Workflow                    | Propósito                                      |
 | --------------------------- | ---------------------------------------------- |
-| `ci.yml`                    | Lint, tests y build en cada push/PR.           |
 | `labeler.yml`               | Auto-etiquetado de PRs (usa `../labeler.yml`). |
 | `dependabot-auto-merge.yml` | Auto-merge de PRs de Dependabot (parches).     |
-| `deploy.yml`                | Despliegue (depende de tu infraestructura).    |
 
 ## Secrets
 

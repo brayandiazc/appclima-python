@@ -1,0 +1,4 @@
+# Dependencias de la aplicación
+requests>=2.31
+# Carga opcional del archivo .env (para la variable API_KEY)
+python-dotenv>=1.0

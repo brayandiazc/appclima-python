@@ -17,11 +17,11 @@
 | Secretos de CI/CD            | Secrets del proveedor (p. ej. GitHub Actions)      |
 
 > **Caso de este proyecto**: la única credencial es la **API Key de
-> OpenWeatherMap** (necesaria en las Etapas 6 y 7). En el código educativo actual
-> aparece como el placeholder `OPENWEATHER_API_KEY` dentro de
-> `etapa-6/funciones_clima.py` y `etapa-7/clima.py`. En un uso real **no** debe
-> escribirse en el código: se lee de una variable de entorno, por ejemplo
-> `os.getenv("API_KEY")`, cargada desde un `.env` que nunca se sube al repo.
+> OpenWeatherMap** (necesaria en las Etapas 6 y 7). El código la lee de la variable
+> de entorno `API_KEY` con `os.getenv("API_KEY")` en `etapa-6/funciones_clima.py`
+> y `etapa-7/clima.py`; si `python-dotenv` está instalado, también se carga
+> automáticamente desde un archivo `.env` local (ignorado por git). Si la variable
+> no está definida, el programa falla con un mensaje claro en lugar de continuar.
 
 ## Reglas
 

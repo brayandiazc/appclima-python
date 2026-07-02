@@ -4,7 +4,6 @@
 from funciones_clima import guardar_en_archivo
 from clima import Clima
 
-
 # Bienvenida e inicio del programa
 print("🌤️ ¡Bienvenido al sistema de clima!")
 consultas = []
