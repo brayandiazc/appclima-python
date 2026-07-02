@@ -12,6 +12,20 @@ y este proyecto adhiere a [Semantic Versioning](https://semver.org/lang/es/).
 - Estructura de documentación y gobernanza adoptada desde `project-starter-template-es`:
   `docs/`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, `CHANGELOG.md`,
   `.env.example`, `.editorconfig` y plantillas de `.github/`.
+- `requirements.txt` con las dependencias del proyecto (`requests`, `python-dotenv`).
+- Workflow de CI (`.github/workflows/ci.yml`): lint con `ruff` y `black`, y verificación
+  de sintaxis de las 7 etapas en Python 3.8–3.12.
+
+### Changed
+
+- La clave de OpenWeatherMap ahora se lee de la variable de entorno `API_KEY`
+  (`os.getenv`), con carga opcional desde `.env`, en lugar de estar escrita en el
+  código de las etapas 6 y 7.
+
+### Security
+
+- Se elimina la clave de API embebida en el código fuente; ahora se gestiona como
+  secreto vía variable de entorno.
 
 ## [1.0.0] - 2026-07-02
 

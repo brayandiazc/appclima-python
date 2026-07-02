@@ -3,7 +3,6 @@
 # Importar funciones
 from funciones_clima import obtener_clima, mostrar_recomendacion, guardar_en_archivo
 
-
 # Bienvenida e inicio del programa
 print("🌤️ ¡Bienvenido al sistema de clima!")
 consultas = []

@@ -76,7 +76,7 @@ cd appclima-python
 ### 2. Instalar dependencias
 
 ```bash
-pip install requests
+pip install -r requirements.txt
 ```
 
 ### 3. Configurar variables de entorno
@@ -125,7 +125,7 @@ Python 3.8+, la librería `requests` y la API de OpenWeatherMap. Inventario comp
 
 ## Testing
 
-El proyecto aún no incluye una suite de pruebas automatizadas. La convención de testing sugerida (pytest) se documenta en [`docs/conventions/testing.md`](docs/conventions/testing.md).
+Cada push y PR ejecuta [CI](.github/workflows/ci.yml): lint con `ruff` y `black`, y verificación de sintaxis de las 7 etapas en Python 3.8–3.12. El proyecto aún no incluye una suite de pruebas automatizadas; la convención de testing sugerida (pytest) se documenta en [`docs/conventions/testing.md`](docs/conventions/testing.md).
 
 ## Contribución
 

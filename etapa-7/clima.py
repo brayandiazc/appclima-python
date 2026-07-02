@@ -1,5 +1,14 @@
 # Importar librerías
+import os
 import requests
+
+# Carga opcional de un archivo .env (si python-dotenv está instalado)
+try:
+    from dotenv import load_dotenv
+
+    load_dotenv()
+except ModuleNotFoundError:
+    pass
 
 
 class Clima:
@@ -52,7 +61,12 @@ class Clima:
         Nota:
         - Maneja potenciales excepciones relacionadas con la solicitud HTTP y los datos devueltos.
         """
-        api_key = "OPENWEATHER_API_KEY"
+        api_key = os.getenv("API_KEY")
+        if not api_key:
+            raise RuntimeError(
+                "Falta la variable de entorno API_KEY. Copia .env.example a .env y "
+                "define tu clave de OpenWeatherMap, o expórtala: export API_KEY=tu_clave"
+            )
         url = f"http://api.openweathermap.org/data/2.5/weather?q={ciudad}&appid={api_key}&units=metric"
         response = requests.get(url)
         data = response.json()
