@@ -7,6 +7,8 @@ y este proyecto adhiere a [Semantic Versioning](https://semver.org/lang/es/).
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-07-02
+
 ### Added
 
 - Estructura de documentación y gobernanza adoptada desde `project-starter-template-es`:
@@ -44,6 +46,7 @@ y este proyecto adhiere a [Semantic Versioning](https://semver.org/lang/es/).
 
 <!--
 Enlaces de comparación entre versiones:
-[Unreleased]: https://github.com/brayandiazc/appclima-python/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/brayandiazc/appclima-python/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/brayandiazc/appclima-python/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/brayandiazc/appclima-python/releases/tag/v1.0.0
 -->
